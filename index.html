@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get destroyed, noob!">
+    <title>You Just Got Clapped!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="message">You Got Clapped! 💀</h1>
+        <h2 class="subtext">Don't cry now, kid. Get good!</h2>
+        <p class="subtext">Try again? You'll still get <span class="highlight">destroyed by souy</span>!</p>
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXd3Zm5ibHd2ZGFmcjR0cGUxdmYxNnM2cXNxZHR1bnB2bDJtdThndSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2sk6ptRewKWKWAaRty/giphy.webp" alt="Take the L" class="animation">
+    </div>
+
+    <script>
+        // Play sound on page load
+        window.onload = function() {
+            let audio = new Audio('clap.wav');  // Make sure to upload a "clap.mp3" file to your server
+            audio.play();
+        }
+
+        // Flashing effect on the main message
+        setInterval(() => {
+            const message = document.querySelector('.message');
+            message.style.visibility = (message.style.visibility === 'hidden') ? 'visible' : 'hidden';
+        }, 500);
+    </script>
+</body>
+</html>
